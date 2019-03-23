@@ -43,7 +43,7 @@ var TestUI = /** @class */ (function (_super) {
         xhr.on(Laya.Event.COMPLETE, this, function (res) {
             _this.parseData(res);
         });
-        xhr.send(this.url + this.datalist.length, null, "GET");
+        xhr.send(this.url + this.datalist.length, null, "GET", "jsonp");
     };
     TestUI.prototype.parseData = function (res) {
         var data = JSON.parse(res);
